@@ -11,9 +11,9 @@ const dates = [
 const createDate = (dates, index = null) => {
   let array = [];
 
-  dates.forEach((date) => {
-    array.push(new Date(date).getTime() / 1000);
-  });
+  for (let i = 0; i < dates.length; i++) {
+    array.push(new Date(dates[i]).getTime() / 1000);
+  }
 
   if (index === null) {
     return array.sort((a, b) => a - b).join("-");
